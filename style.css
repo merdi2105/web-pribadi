@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  background: #0d0d0d;
+  color: #ffffff;
+}
+
+/* Loader */
+.loader {
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: #0d0d0d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner {
+  border: 8px solid #555;
+  border-top: 8px solid #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+/* Background animated */
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, #ff416c, #ff4b2b, #1e90ff, #6a11cb);
+  background-size: 800% 800%;
+  animation: moveGradient 20s ease infinite;
+  z-index: -1;
+  filter: blur(100px);
+}
+
+@keyframes moveGradient {
+  0% { background-position: 0% 50%;}
+  50% { background-position: 100% 50%;}
+  100% { background-position: 0% 50%;}
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(15px);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.nav-logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff4b2b;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.hero-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 4px solid white;
+  object-fit: cover;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* Highlight */
+.highlight {
+  color: #ff4b2b;
+}
+
+/* Sections */
+section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+p {
+  font-size: 1rem;
+  color: #ccc;
+  text-align: center;
+}
+
+/* Service cards */
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Blog */
+.blog-posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.post {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 15px;
+  width: 300px;
+  backdrop-filter: blur(10px);
+}
+
+/* Contact */
+.contact p a {
+  color: #ff4b2b;
+  text-decoration: none;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(5px);
+  margin-top: 4rem;
+}
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .hero-img {
+    animation: float 3s ease-in-out infinite;
+  }
+  .services {
+    padding: 60px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 900px;
+  }
+  
+  .services h2 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+  }
+  
+  .service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .service-item {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .service-item h3 {
+    margin-bottom: 10px;
+    color: #ff4b2b;
+  }
+  
+  .service-item p {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+  .blog-section {
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    max-width: 900px;
+    margin: 40px auto;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  .blog-post {
+    color: #ddd;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .blog-title {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    color: #ff4b2b;
+  }
+  
+  .blog-meta {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    color: #aaa;
+  }
+  
+  .blog-intro, .blog-content, .blog-outro, .blog-contact {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    font-size: 1.05em;
+  }
+  
+  .blog-list {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .blog-list li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  .blog-section {
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    max-width: 900px;
+    margin: 40px auto;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  .blog-post {
+    color: #ddd;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .blog-title {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    color: #ff4b2b;
+  }
+  
+  .blog-meta {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    color: #aaa;
+  }
+  
+  .blog-intro, .blog-content, .blog-outro, .blog-contact {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    font-size: 1.05em;
+  }
+  
+  .blog-list {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .blog-list li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  .notification {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(255, 75, 43, 0.9);
+    color: #fff;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    transition: opacity 1s ease, transform 1.2s ease;
+    z-index: 999;
+  }
+  
+  .notification.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  
+  
+  .hidden {
+    display: none;
+  }
+  .btn-bottom:hover {
+    background-color: #45a049;  /* Mengubah warna saat hover */
+    transform: scale(1.1);       /* Efek memperbesar tombol */
+    transition: transform 0.3s ease;  /* Animasi halus */
+}
+body {
+  cursor: url('c:\Users\merdi\OneDrive\Pictures\cursor-png-1108.pngc:\Users\merdi\OneDrive\Pictures\curshor png.jpeg'), auto;  /* Menambahkan gambar kursor kustom */
+}
